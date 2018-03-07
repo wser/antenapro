@@ -8,4 +8,5 @@ Which means you can use them for both personal and commercial projects – for f
 potrebno:
 reducirati fa icons na icomoon
 dodati ga analythics
+kompresirati slike
 promijeniti
