@@ -9,4 +9,5 @@ potrebno:
 reducirati fa icons na icomoon
 dodati ga analythics
 kompresirati slike
-promijeniti
+minimizirati assets css, js...
+promijeniti gmail adresu
