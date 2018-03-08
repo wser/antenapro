@@ -28,11 +28,26 @@
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 
-	<style type="text/css">
-		.bs-example{
-			margin: 20px;
-		}
-	</style>
+<style type="text/css">
+#accordion .panel-heading { padding: 0;}
+#accordion .panel-title > a {
+	display: block;
+	padding: 0.4em 0.6em;
+    outline: none;
+    font-weight:bold;
+    text-decoration: none;
+}
+
+#accordion .panel-title > a.accordion-toggle::before, #accordion a[data-toggle="collapse"]::before  {
+    content:"\e113";
+    float: left;
+    font-family: 'Glyphicons Halflings';
+	margin-right :1em;
+}
+#accordion .panel-title > a.accordion-toggle.collapsed::before, #accordion a.collapsed[data-toggle="collapse"]::before  {
+    content:"\e114";
+}
+</style>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -175,40 +190,98 @@
 				<div class="row">
 
 					<!-- why choose us content -->
-					<div class="col-md-6">
-						<div class="section-header">
-							<h2 class="title">Zašto nas odabrati</h2>
+						<div class="col-md-6">
+							<div class="section-header">
+								<h2 class="title">Zašto nas odabrati</h2>
+							</div>
+							<p>Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris. Ultrices sagittis orci a scelerisque purus.</p>
+							<div class="feature">
+								<i class="fa fa-check"></i>
+								<p>Quis varius quam quisque id diam vel quam elementum.</p>
+							</div>
+							<div class="feature">
+								<i class="fa fa-check"></i>
+								<p>Mauris augue neque gravida in fermentum.</p>
+							</div>
+							<div class="feature">
+								<i class="fa fa-check"></i>
+								<p>Orci phasellus egestas tellus rutrum.</p>
+							</div>
+							<div class="feature">
+								<i class="fa fa-check"></i>
+								<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
+							</div>
 						</div>
-						<p>Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris. Ultrices sagittis orci a scelerisque purus.</p>
-						<div class="feature">
-							<i class="fa fa-check"></i>
-							<p>Quis varius quam quisque id diam vel quam elementum.</p>
-						</div>
-						<div class="feature">
-							<i class="fa fa-check"></i>
-							<p>Mauris augue neque gravida in fermentum.</p>
-						</div>
-						<div class="feature">
-							<i class="fa fa-check"></i>
-							<p>Orci phasellus egestas tellus rutrum.</p>
-						</div>
-						<div class="feature">
-							<i class="fa fa-check"></i>
-							<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
-						</div>
-					</div>
 					<!-- /why choose us content -->
 
 					<!-- About slider -->
 					<div class="col-md-6">
-						<div id="about-slider" class="owl-carousel owl-theme">
-							<img class="img-responsive" src="./img/a/about1.jpg" alt="">
-							<img class="img-responsive" src="./img/a/about2.jpg" alt="">
-							<img class="img-responsive" src="./img/a/about1.jpg" alt="">
-							<img class="img-responsive" src="./img/a/about2.jpg" alt="">
+							<div id="about-slider" class="owl-carousel owl-theme">
+								<img class="img-responsive" src="./img/a/about1.jpg" alt="">
+								<img class="img-responsive" src="./img/a/about2.jpg" alt="">
+								<img class="img-responsive" src="./img/a/about1.jpg" alt="">
+								<img class="img-responsive" src="./img/a/about2.jpg" alt="">
+							</div>
 						</div>
-					</div>
-					<!-- /About slider -->
+						<!-- /About slider -->
+					
+					<!-- Accordion Usluge -->
+						<div class="col-md-12">
+				
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="headingOne">
+												<h4 class="panel-title">
+													<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+														Ugradnja
+													</a>
+												</h4>
+											</div>
+											<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+												<div class="panel-body">
+												<ul>
+														<li>The titles are block, so you don't have to click the text part to activate it</li>
+														<li>Indicators for expand / collapsing items</li>
+														<li>Removed title links' obnoxious :hover  underlinings, and outlines.</li>
+												</ul>
+											</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="headingTwo">
+												<h4 class="panel-title">
+													<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+														Videonadzor
+													</a>
+												</h4>
+											</div>
+											<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+												<div class="panel-body">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="headingThree">
+												<h4 class="panel-title">
+													<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+														totalTV
+													</a>
+												</h4>
+											</div>
+											<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+												<div class="panel-body">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									
+				
+								
+						</div>
+					<!-- /Accordion Usluge -->
 
 				</div>
 				<!-- /Row -->
@@ -218,49 +291,6 @@
 
 		</div>
 	<!-- /Why Choose Us -->
-
-	<!-- Accordion Usluge -->
-		<div class="bs-example">
-			<div class="panel-group" id="accordion">
-					<div class="panel panel-default">
-							<div class="panel-heading">
-									<h4 class="panel-title">
-											<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> Ugradnja</a>
-									</h4>
-							</div>
-							<div id="collapseOne" class="panel-collapse collapse in">
-									<div class="panel-body">
-											<p>HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
-									</div>
-							</div>
-					</div>
-					<div class="panel panel-default">
-							<div class="panel-heading">
-									<h4 class="panel-title">
-											<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Videonadzor</a>
-									</h4>
-							</div>
-							<div id="collapseTwo" class="panel-collapse collapse">
-									<div class="panel-body">
-											<p>Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
-									</div>
-							</div>
-					</div>
-					<div class="panel panel-default">
-							<div class="panel-heading">
-									<h4 class="panel-title">
-											<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">TotalTV</a>
-									</h4>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse">
-									<div class="panel-body">
-											<p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
-									</div>
-							</div>
-					</div>
-			</div>	
-		</div>
-	<!-- /Accordion Usluge -->
 
 
 	<!-- Numbers -->
