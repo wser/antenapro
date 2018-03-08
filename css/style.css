@@ -264,8 +264,13 @@ Table OF Contents
         padding: 0;
     }
 
-    .navbar-brand .logo, .navbar-brand .logo-alt {
+    .navbar-brand .logo {
         max-height: 50px;
+        display: block;
+    }
+    
+    .navbar-brand .logo-alt {
+        max-height: 200px;
         display: block;
     }
 
@@ -1494,7 +1499,7 @@ Table OF Contents
     }
 
     .footer-logo>a>img {
-        max-height: 80px;
+        max-height: 150px;
     }
 
     .footer-follow {
