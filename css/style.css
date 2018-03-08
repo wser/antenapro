@@ -599,7 +599,7 @@ Table OF Contents
     }
 
     .home-content h1 {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     }
     .home-content button {
     margin-top: 20px;
