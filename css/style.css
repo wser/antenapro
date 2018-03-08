@@ -1429,6 +1429,38 @@ Table OF Contents
         margin-bottom: 20px;
     }
 
+
+
+    .contact:after {
+        content: "";
+        background-color: #1C1D21;
+        opacity: 0.8;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 0%;
+        z-index: -1;
+        -webkit-transition: 0.2s width;
+        transition: 0.2s width;
+    }
+
+    .contact:hover:after {
+        width: 100%;
+    }
+
+    .contact h3 {
+        -webkit-transition: 0.2s color;
+        transition: 0.2s color;
+    }
+
+    .contact:hover h3 {
+        color: #fff;
+    }
+
+
+
+
     .contact-form {
         text-align: center;
         margin-top: 40px;
