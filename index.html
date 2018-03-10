@@ -40,6 +40,10 @@
 				background-position: center;
 				background-size: cover;
 		}
+
+		#honeypot, #tema {
+			display: none; /*makes the field not visible to humans*/
+		}
 	</style>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -329,11 +333,34 @@
 										<label for="cpDesc">Pošaljite upit za TotalTV</label>
 									</div>
 									<div class="col-md-12">
-										<form action="https://formspree.io/wser.web@gmail.com"
-											method="POST" class="contact-form vcenter">														
+										<div style="display:none;" id="thankyou_message">
+											<h3>
+												<em>
+													Zahvaljujemo na vašem interesu!
+												</em> 
+											</h3>
+												<p>
+														Odgovor ćete dobiti uskoro!
+												</p>											
+										</div>
+
+
+
+										<form 
+											id="gform"
+											class="contact-form"
+											action="https://script.google.com/macros/s/AKfycbwal_heHkbRiAnIQPbWNEaADcCkRJHy4ze9fFVcFqv5uvvaFu2g/exec"
+											method="POST">					
+											
+											<!--input id must be honeypot or else it wont work-->
+												<label class="sr-only">Keep this field blank</label>
+												<input id="honeypot" type="text" name="honeypot" value="" />
+												<input id="tema" type="text" name="tema" value="TotalTV" />
+											
+
 												<input type="text" name="name" class="input-lg margin-bottom" placeholder="Ime">
-												<input type="email" name="_replyto" class="input-lg margin-bottom" placeholder="Email">														 
-												<textarea class="input-totalTV" placeholder="Upit"></textarea>
+												<input type="email" name="email" class="input-lg margin-bottom" placeholder="Email">														 
+												<textarea type="message" name="message" placeholder="Upit" class="input-totalTV"></textarea>
 												<button type="submit" class="main-btn">Pošalji</button>
 										</form>
 									</div>
@@ -471,11 +498,34 @@
 					<!-- contact form -->
 					<div class="col-md-8 col-md-offset-2">
 
-						<form action="https://formspree.io/wser.web@gmail.com"
-									method="POST" class="contact-form">
-								<input type="text" name="name" class="input-lg margin-bottom" placeholder="Name">
-								<input type="email" name="_replyto" class="input-lg margin-bottom" placeholder="Email">
-								<textarea class="input-contact margin-bottom" placeholder="Message"></textarea>
+						<div class="col-md-12">
+							<div style="display:none;" id="thankyou_message2">
+								<h3>
+									<em>
+										Zahvaljujemo na vašem interesu!
+									</em> 
+								</h3>
+									<p>
+											Odgovor ćete dobiti uskoro!
+									</p>											
+							</div>
+						</div>
+
+						<form 
+							id="gform2"
+							class="contact-form"
+							action="https://script.google.com/macros/s/AKfycbwal_heHkbRiAnIQPbWNEaADcCkRJHy4ze9fFVcFqv5uvvaFu2g/exec"
+							method="POST">					
+							
+							<!--input id must be honeypot or else it wont work-->
+								<label class="sr-only">Keep this field blank</label>
+								<input id="honeypot2" type="text" name="honeypot2" value="" />
+								<input id="tema" type="text" name="tema" value="Kontakt Razno" />
+							
+
+								<input type="text" name="name" class="input-lg margin-bottom" placeholder="Ime">
+								<input type="email" name="email" class="input-lg margin-bottom" placeholder="Email">														 
+								<textarea type="message" name="message" placeholder="Upit" class="input-contact"></textarea>
 								<button type="submit" class="main-btn">Pošalji</button>
 						</form>
 
@@ -559,6 +609,7 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript"data-cfasync="false" src="js/form-submission-handler.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
